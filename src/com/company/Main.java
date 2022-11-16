@@ -27,6 +27,20 @@ public class Main {
         }
 
 
-        
+        // average
+        if (chosen == 1) {
+            int sum = 0; // holding the sum of items
+            System.out.println("Enter the number of items : ");
+            num = Integer.parseInt(scanner.nextLine());
+            for(int i = 0;i < num;i++) {
+                System.out.println("Enter the " + (i + 1) + " value");
+                int temp = Integer.parseInt(scanner.nextLine());
+                sum += temp;
+            }
+
+            Double average = Double.valueOf(sum);
+            average /= Double.valueOf(num);
+            System.out.println("The average of the numbers : " + average);
+        }
     }
 }
