@@ -48,5 +48,34 @@ public class Main {
             // printing the value
             System.out.println("The average of the numbers : " + average);
         }
+
+
+        // top value
+        else {
+            int topValue = Integer.MIN_VALUE; // holding the Max value
+
+
+            // taking the number of items from the user
+            System.out.println("Enter the number of items : ");
+            num = Integer.parseInt(scanner.nextLine()); // taking the number of items from the use
+
+
+            // taking the items from the user
+            for(int i = 0;i < num;i++) {
+                System.out.println("Enter the " + (i + 1) + " value");
+                int temp = Integer.parseInt(scanner.nextLine());
+
+
+                // checking if the items are greater than the Max value
+                if (temp > topValue) {
+                    topValue = temp;
+                }
+            }
+
+
+            // printing the Max value
+            System.out.println("The Max value is : ");
+            System.out.println(topValue);
+        }
     }
 }
